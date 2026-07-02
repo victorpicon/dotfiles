@@ -1,0 +1,21 @@
+/* Template focado em sobrescrever o fundo e texto */
+@define-color bg_color {background};
+@define-color fg_color {foreground};
+@define-color accent {color4};
+
+* {{
+    background-color: @bg_color;
+    color: @fg_color;
+}}
+
+/* Força a visualização de ícones e barras laterais */
+.view, .sidebar, ThunarWindow {{
+    background-color: @bg_color;
+    color: @fg_color;
+}}
+
+/* Mantém a seleção visível */
+selection, :selected {{
+    background-color: @accent;
+    color: @bg_color;
+}}
